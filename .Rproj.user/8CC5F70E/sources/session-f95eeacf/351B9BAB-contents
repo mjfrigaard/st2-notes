@@ -22,9 +22,13 @@ execute:
   message: false
 ---
 
-This quarto project covers the YouTube series on `shinytest2` ([Part 1](https://www.youtube.com/watch?v=Gucwz865aqQ), [Part 2](https://www.youtube.com/watch?v=7KLv6HdIxvU), and [Part 3](https://www.youtube.com/watch?v=xDxa_mDwN04)). Check out the [package website](https://rstudio.github.io/shinytest2/index.html) for more information.
+This quarto project covers the YouTube series on `shinytest2` ([Part 1](https://www.youtube.com/watch?v=Gucwz865aqQ), [Part 2](https://www.youtube.com/watch?v=7KLv6HdIxvU), and [Part 3](https://www.youtube.com/watch?v=xDxa_mDwN04)). The quoted text comes from the transcripts, which I've edited to capture the 'gist' of what is covered in each video. 
 
-The full application in the demo is below:
+# Setup
+
+Check out my [GitHub repository](https://github.com/mjfrigaard/greet) for getting setup with Chromium and [`chromote`](https://rstudio.github.io/chromote/) (and the app test files).
+
+The inital application for the tutorial is below:
 
 ```{r}
 #| code-fold: true
@@ -62,7 +66,7 @@ server <- function(input, output, session) {
 shinyApp(ui, server)
 ```
 
-# Getting Started with {shinytest2} Part I: [Example + basics](https://www.youtube.com/watch?v=Gucwz865aqQ)
+# Part I: [Example + basics](https://www.youtube.com/watch?v=Gucwz865aqQ)
 
 > *`shinytest2` is a wonderful package to help do regression testing for your Shiny applications. And we're going to perform this regression testing inside `testthat`. And it's not regression testing like linear model or something like that. This is a consistent behavior over time, and so we do not want it to regress, or we do not want it to change. That's what I mean for regression testing.*
 >
@@ -494,7 +498,7 @@ Test complete
 
 > *Test complete. Perfect.*
 
-# Getting Started with {shinytest2} Part 2: [Exporting values](https://www.youtube.com/watch?v=7KLv6HdIxvU)
+# Part 2: [Exporting values](https://www.youtube.com/watch?v=7KLv6HdIxvU)
 
 ## Introduction
 
@@ -893,7 +897,7 @@ test_that(desc = "export test values", code = {
 
 > *great now we have two checks passed.* 
 
-# Getting Started with {shinytest2} Part 3: [Using shiny.testmode](https://youtu.be/xDxa_mDwN04)
+# Part 3: [Using shiny.testmode](https://youtu.be/xDxa_mDwN04)
 
 ## Introduction 
 
@@ -1171,6 +1175,5 @@ app$get_value(export = "penguin_count")
 
 # Resources
 
-1. [GitHub repository with app](https://github.com/mjfrigaard/greet) 
-2. [`shinytest2` package website](https://rstudio.github.io/shinytest2/index.html) 
-3. [Unit testing with `shinytest2` talk](https://www.youtube.com/watch?v=DMgAW4m5aTI) 
+1. [`shinytest2` package website](https://rstudio.github.io/shinytest2/index.html) 
+2. [Unit testing with `shinytest2` talk](https://www.youtube.com/watch?v=DMgAW4m5aTI) 
